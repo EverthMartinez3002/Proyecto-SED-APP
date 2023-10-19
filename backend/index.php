@@ -1,6 +1,8 @@
 <?php
-if ($_SERVER['REQUEST_METHOD'] === 'GET') {
-    echo 'Esto es una respuesta GET';
-} else if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    echo 'Esto es una respuesta POST';
+$request_uri = $_SERVER["REQUEST_URI"];
+
+if ($request_uri === '/') {
+    include ('api/views/home.php');
+} else {
+    include('api/routes/router.php');
 }
