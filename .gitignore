@@ -1,0 +1,10 @@
+# local env files
+.env.local
+.env.*.local
+.env
+
+#FILES
+.DS_Store
+node_modules
+/dist
+package-lock.json
