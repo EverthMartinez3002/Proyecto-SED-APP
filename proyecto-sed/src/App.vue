@@ -1,15 +1,12 @@
 <template>
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-    </div>
-
+      <Home/>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue';
+import Home from './views/Home.vue';
 export default{
   components: {
-    HelloWorld,
+    Home,
   }
 }
 </script>
