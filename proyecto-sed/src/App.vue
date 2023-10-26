@@ -1,12 +1,8 @@
+<script setup>
+import { RouterView } from 'vue-router'
+</script>
+
 <template>
-      <Home/>
+  <RouterView />
 </template>
 
-<script>
-import Home from './views/Home.vue';
-export default{
-  components: {
-    Home,
-  }
-}
-</script>

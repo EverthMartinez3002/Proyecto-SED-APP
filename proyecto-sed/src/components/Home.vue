@@ -11,16 +11,31 @@
         </ul>
         <v-row class="mt-8">
           <v-col cols="6">
-            <v-btn color="primary" to="/register" block large>Registrarse</v-btn>
+            <v-btn @click="toRegistro" color="primary" block large>Registrarse</v-btn>
           </v-col>
           <v-col cols="6">
-            <v-btn color="primary" to="/login" block large>Iniciar Sesión</v-btn>
+            <v-btn color="primary" block large>Iniciar Sesión</v-btn>
           </v-col>
         </v-row>
       </v-container>
     </v-main>
   </v-app>
 </template>
+
+<script>
+import { useRouter } from 'vue-router';
+
+export default{
+  setup() {
+    const router = useRouter();
+
+    const toRegistro = () => {
+      router.push({ name: 'Register'})
+    }
+
+    return { toRegistro};
+  }
+}</script>
 
 <style scoped>
 .custom-list {
