@@ -14,7 +14,7 @@
             <v-btn @click="toRegistro" color="primary" block large>Registrarse</v-btn>
           </v-col>
           <v-col cols="6">
-            <v-btn color="primary" block large>Iniciar Sesión</v-btn>
+            <v-btn @click="toLogin" color="primary" block large>Iniciar Sesión</v-btn>
           </v-col>
         </v-row>
       </v-container>
@@ -33,7 +33,11 @@ export default{
       router.push({ name: 'Register'})
     }
 
-    return { toRegistro};
+    const toLogin = () => {
+      router.push({ name: 'Login'})
+    }
+
+    return { toRegistro, toLogin};
   }
 }</script>
 
